@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.7)),
+        url('gta6.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 15, 0.3);
+    backdrop-filter: blur(2px);
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 40px 24px;
+    width: min(900px, 90%);
+}
+
+.tag {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #d9d9d9;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 7rem);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #f4f4f4;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.subtitle {
+    margin: 20px 0 30px;
+    font-size: 1.2rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d1d1d1;
+}
+
+.countdown {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(120px, 1fr));
+    gap: 18px;
+    justify-content: center;
+}
+
+.time-box {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    padding: 22px 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+}
+
+.time-box span {
+    display: block;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.time-box small {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #d9d9d9;
+}
+
+@media (max-width: 640px) {
+    .countdown {
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+    }
+
+    .tag,
+    .subtitle {
+        letter-spacing: 0.12em;
+    }
+}
